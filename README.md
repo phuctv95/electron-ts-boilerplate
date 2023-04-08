@@ -2,11 +2,11 @@
 
 A boilterplate of Electron that:
 
-- Use TypeScript.
-- Use pnpm.
-- Use esbuild.
-- Support hot reload for renderer.
-- Constant channels.
+- Uses TypeScript.
+- Uses pnpm.
+- Uses esbuild.
+- Supports hot reload for renderer.
+- Has constants for channels.
 
 Main files:
 
@@ -15,6 +15,6 @@ src/
     main/
         main.ts
     renderer/
-        renderer.ts
+        renderer.html
     preloader.ts
 ```
