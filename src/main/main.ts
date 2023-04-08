@@ -1,4 +1,3 @@
-// @ts-ignore
 import { app, BrowserWindow } from 'electron';
 import { preloadFilePath, rendererHtmlFilePath, watchRenderer } from './core';
 import { setUpListenters } from './listeners';
