@@ -10,9 +10,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/lodash": "^4.14.192",
     "chokidar": "^3.5.3",
     "concurrently": "^8.0.1",
     "electron": "^24.0.0",
-    "esbuild": "^0.17.15"
+    "esbuild": "^0.17.15",
+    "lodash": "^4.17.21"
   }
 }

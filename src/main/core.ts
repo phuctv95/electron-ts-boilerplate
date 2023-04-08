@@ -1,6 +1,7 @@
 import * as path from 'path';
 import * as chokidar from 'chokidar';
 import { BrowserWindow } from 'electron';
+import { debounce } from 'lodash';
 
 const rootPath = process.env.PWD!;
 
@@ -12,5 +13,10 @@ export const rendererCssFilePath = path.join(rootPath, 'dist/renderer.css');
 export function watchRenderer(window: BrowserWindow) {
   chokidar
     .watch([rendererHtmlFilePath, rendererJsFilePath, rendererCssFilePath])
-    .on('change', () => window.loadURL(rendererHtmlFilePath));
+    .on(
+      'all',
+      debounce(() => {
+        window.loadURL(rendererHtmlFilePath);
+      }, 100)
+    );
 }

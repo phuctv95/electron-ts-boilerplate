@@ -1,16 +1,20 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/lodash': ^4.14.192
   chokidar: ^3.5.3
   concurrently: ^8.0.1
   electron: ^24.0.0
   esbuild: ^0.17.15
+  lodash: ^4.17.21
 
 devDependencies:
+  '@types/lodash': 4.14.192
   chokidar: 3.5.3
   concurrently: 8.0.1
   electron: 24.0.0
   esbuild: 0.17.15
+  lodash: 4.17.21
 
 packages:
 
@@ -258,6 +262,10 @@ packages:
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
     dependencies:
       '@types/node': 18.15.11
+    dev: true
+
+  /@types/lodash/4.14.192:
+    resolution: {integrity: sha512-km+Vyn3BYm5ytMO13k9KTp27O75rbQ0NFw+U//g+PX7VZyjCioXaRFisqSIJRECljcTv73G3i6BpglNGHgUQ5A==}
     dev: true
 
   /@types/node/18.15.11:
