@@ -18,3 +18,5 @@ src/
         renderer.html
     preloader.ts
 ```
+
+To start devlelopment, run `pnpm run dev`.
