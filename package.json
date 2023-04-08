@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/main.js",
   "scripts": {
-    "dev": "concurrently \"node esbuild.mjs\" \"electron .\""
+    "dev": "concurrently \"node esbuild.mjs\" \"cd src/renderer && pnpm run build-watch\" \"electron .\""
   },
   "keywords": [],
   "author": "",

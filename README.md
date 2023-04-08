@@ -15,7 +15,7 @@ src/
     main/
         main.ts
     renderer/
-        renderer.html
+        (Svelte files for renderer here)
     preloader.ts
 ```
 

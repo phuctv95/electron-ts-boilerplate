@@ -3,7 +3,7 @@
   "useTabs": false,
   "overrides": [
     {
-      "files": "*.ts",
+      "files": ["*.ts", "*.svelte"],
       "options": {
         "singleQuote": true
       }

@@ -6,17 +6,17 @@ import { debounce } from 'lodash';
 const rootPath = process.env.PWD!;
 
 export const preloadFilePath = path.join(rootPath, 'dist/preload.js');
-export const rendererHtmlFilePath = path.join(rootPath, 'dist/renderer.html');
-export const rendererJsFilePath = path.join(rootPath, 'dist/renderer.js');
-export const rendererCssFilePath = path.join(rootPath, 'dist/renderer.css');
+export const rendererFolderPath = path.join(rootPath, 'dist/renderer');
+export const rendererHtmlFilePath = path.join(
+  rendererFolderPath,
+  'renderer.html'
+);
 
 export function watchRenderer(window: BrowserWindow) {
-  chokidar
-    .watch([rendererHtmlFilePath, rendererJsFilePath, rendererCssFilePath])
-    .on(
-      'all',
-      debounce(() => {
-        window.loadURL(rendererHtmlFilePath);
-      }, 100)
-    );
+  chokidar.watch(rendererFolderPath).on(
+    'all',
+    debounce(() => {
+      window.loadURL(rendererHtmlFilePath);
+    }, 100)
+  );
 }
