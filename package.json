@@ -4,14 +4,14 @@
   "description": "",
   "main": "dist/main.js",
   "scripts": {
-    "watch-ts": "node esbuild.mjs",
-    "start-electron": "electron ."
+    "dev": "concurrently \"node esbuild.mjs\" \"electron .\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "chokidar": "^3.5.3",
+    "concurrently": "^8.0.1",
     "electron": "^24.0.0",
     "esbuild": "^0.17.15"
   }

@@ -18,8 +18,3 @@ src/
         renderer.ts
     preloader.ts
 ```
-
-How to use:
-
-1. Run `pnpm run watch-renderer` to build and watch the renderer process.
-2. Then, run `pnpm run start-electron` to start the app (changing the main process code needs to rerun this command).
