@@ -4,4 +4,4 @@ import { PreloadApi } from './preload-api';
 
 contextBridge.exposeInMainWorld('preloadApi', {
   setTitle: (title) => ipcRenderer.send(Channels.SetTitle, title),
-} as PreloadApi);
+} satisfies PreloadApi);
