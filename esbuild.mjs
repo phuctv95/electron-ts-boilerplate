@@ -4,7 +4,7 @@ const ctx1 = await esbuild.context({
   entryPoints: [ 'src/main/main.ts' ],
   bundle: true,
   platform: 'node',
-  external: [ 'electron' ],
+  external: [ 'electron', 'fsevents' ],
   outdir: 'dist',
 });
 
