@@ -16,7 +16,11 @@ export function watchRenderer(window: BrowserWindow) {
   chokidar.watch(rendererFolderPath).on(
     'all',
     debounce(() => {
-      window.loadURL(rendererHtmlFilePath);
+      window.loadURL(fileUriScheme(rendererHtmlFilePath));
     }, 100)
   );
+}
+
+export function fileUriScheme(filePath: string) {
+  return `file://${filePath}`;
 }

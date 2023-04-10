@@ -1,5 +1,10 @@
 import { app, BrowserWindow } from 'electron';
-import { preloadFilePath, rendererHtmlFilePath, watchRenderer } from './core';
+import {
+  fileUriScheme,
+  preloadFilePath,
+  rendererHtmlFilePath,
+  watchRenderer,
+} from './core';
 import { setUpListenters } from './listeners';
 
 app.whenReady().then(() => {
@@ -11,7 +16,7 @@ app.whenReady().then(() => {
     },
   });
 
-  window.loadURL(rendererHtmlFilePath);
+  window.loadURL(fileUriScheme(rendererHtmlFilePath));
   watchRenderer(window);
   setUpListenters(window);
 });
